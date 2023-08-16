@@ -2,10 +2,12 @@
     ViewData["Title"] = "Animals";
 }
 
-<h1>All Reviews:</h1>
+<h1>@Model.Name</h1>
+<hr>
+<h2>@Model.City, @Model.Country</h2>
 
 <ol>
-    @foreach (Review review in Model)
+    @foreach (Review review in Model.Reviews)
     {
         <li><strong>@review.Title</strong> | <a href="/Reviews/Details/@(review.ReviewId)">View Details</a></li>
     }
